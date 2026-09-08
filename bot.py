@@ -5,7 +5,7 @@ from aiogram.filters import Command
 TOKEN = os.getenv("BOT_TOKEN")
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
-@dp.message(Command("start"))
+@dp.message(Command("start")) .
 async def start_handler(message: types.Message):
      await message.answer("Привіт! Я бот з розкладом універу. Напиши /schedule щоб побачити розклад.")
 @dp.message(Command("schedule"))
